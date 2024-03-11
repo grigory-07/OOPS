@@ -1,0 +1,55 @@
+public class CPU {
+    private double price;
+    private Processor processor;
+    private RAM ram;
+
+    public CPU(double price, int processorCores, String processorManufacturer, int ramMemory, String ramManufacturer) {
+        this.price = price;
+        this.processor = new Processor(processorCores, processorManufacturer);
+        this.ram = new RAM(ramMemory, ramManufacturer);
+    }
+
+    // Inner class Processor
+    class Processor {
+        private int numberOfCores;
+        private String manufacturer;
+
+        public Processor(int numberOfCores, String manufacturer) {
+            this.numberOfCores = numberOfCores;
+            this.manufacturer = manufacturer;
+        }
+
+        public void displayProcessorInfo() {
+            System.out.println("Processor Information - Cores: " + numberOfCores + ", Manufacturer: " + manufacturer);
+        }
+    }
+
+    // Static nested class RAM
+    static class RAM {
+        private int memory;
+        private String manufacturer;
+
+        public RAM(int memory, String manufacturer) {
+            this.memory = memory;
+            this.manufacturer = manufacturer;
+        }
+
+        public void displayRAMInfo() {
+            System.out.println("RAM Information - Memory: " + memory + " GB, Manufacturer: " + manufacturer);
+        }
+    }
+
+    public void displayCPUInfo() {
+        System.out.println("CPU Information - Price: $" + price);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object of CPU
+        CPU cpu = new CPU(500.0, 4, "Intel", 8, "Kingston");
+
+        // Displaying information of Processor and RAM
+        cpu.processor.displayProcessorInfo();
+        cpu.ram.displayRAMInfo();
+        cpu.displayCPUInfo();
+    }
+}
