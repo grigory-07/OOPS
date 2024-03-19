@@ -1,0 +1,17 @@
+class string
+{
+    public static void main(String args[])
+    {
+        String str="HELLO";
+        String toCheckstr="HELLO";
+        if(str.startsWith(toCheckstr))
+        {
+            System.out.println("The string does start with "+toCheckstr);
+
+        }
+        else
+        {
+            System.out.println("The string does not start with "+toCheckstr);
+        }
+    }
+}
