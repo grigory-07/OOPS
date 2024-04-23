@@ -1,0 +1,73 @@
+Arithmetic package
+==================
+
+Add.java:-
+__________
+package Arithmetic;
+public class Add
+{
+    public int sum(int x,int y)
+    {
+        return x+y;
+    }
+}
+
+
+div.java
+_________
+package Arithmetic;
+public class div
+{
+    public double Quotient(int x,int y)
+    {
+        return x/y;
+    }
+}
+
+
+mult.java
+__________
+package Arithmetic;
+public class Mult
+{
+    public int Product(int x,int y)
+    {
+        return x*y;
+    }
+}
+
+
+Subtract.java
+______________
+package Arithmetic;
+public class Subtract
+{
+    public int diff(int x,int y)
+    {
+        return x-y;
+    }
+}
+
+
+operations.java
+________________
+import Arithmetic.*;
+class operations
+{
+    public static void main(String[] args) {
+        Add ob1 = new Add();
+        Subtract ob2 = new Subtract();
+        Mult ob3 = new Mult();
+        div ob4 = new div();
+        int s=ob1.sum(5,3);
+        int t=ob2.diff(5,3);
+        int u=ob3.Product(5,3);
+        double v=ob4.Quotient(15,3);
+
+        System.out.println("Sum: " + s);
+        System.out.println("Subtract: " + t);
+        System.out.println("Multiplication: " + u);
+        System.out.println("division: " + v);
+
+    }
+}
